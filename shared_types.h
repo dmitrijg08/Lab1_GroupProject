@@ -2,14 +2,16 @@
 #include <string>
 #include <vector>
 
+// Структура для зберігання спільних вхідних даних (вимога до завдання)
 struct InputData {
-    std::string text;
-    std::string pattern;
+    std::string text;    // Текст, у якому здійснюється пошук
+    std::string pattern; // Шуканий підрядок
 };
 
+// Структура для зберігання результату роботи алгоритму
 struct Result {
-    std::vector<int> positions;
-    int count;
-    int comparisons; // Для порівняння ефективності
-    double time_ms;  // Час виконання
+    std::vector<int> positions; // Індекси початкових позицій знайдених підрядків
+    int count = 0;              // Загальна кількість знайдених входжень
+    int comparisons = 0;        // Кількість посимвольних порівнянь для оцінки ефективності
+    double time_ms = 0.0;       // Час виконання алгоритму в мілісекундах
 };
